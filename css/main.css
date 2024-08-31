@@ -1,0 +1,226 @@
+html{
+    font-size: 10px;
+}
+body {
+	background: #151515;
+	font-family: "lora-regular", serif;
+    font-family: "poppins-medium", sans-serif;
+	font-size: 1.7rem;
+	line-height: 3rem;
+	color: #6e6e6e;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "poppins-semibold", sans-serif;
+	color: #313131;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin-bottom: 2.1rem;
+}
+
+h1 {
+	font-size: 3.1rem;
+	line-height: 1.355;
+	letter-spacing: -.1rem;
+}
+
+h2 {
+	font-family: "poppins-bold";
+	margin-bottom: 1.2rem;
+}
+
+h3 {
+	margin-bottom: 1.8rem;
+}
+
+/**
+ * sections' structure
+ * -------------------------------------------------------------------
+ */
+#about, #education {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+	background: #ebebeb;
+}
+
+/**
+ * common class
+ * -------------------------------------------------------------------
+ */
+ .section-intro {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 3.6rem;
+	position: relative;
+}
+
+ .section-intro h1{
+    /*font-family: "poppins-bold", sans-serif;*/
+	color: #FF0077;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+	font-size: 2.3rem;
+	line-height: 1.565;
+	letter-spacing: .3rem;
+	margin-bottom: 0;
+}
+
+/*
+.section-intro h2{
+    font-family: "poppins-semibold", serif;
+	font-size: 3.6rem;
+	color: #313131;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+}
+*/
+
+.about-profile h3, 
+.about-skills h3{
+    /*font-family: "poppins-bold", sans-serif;*/
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: .25rem;
+}
+
+/**
+ * about-profile-details
+ * -------------------------------------------------------------------
+ */
+.about-profile-details{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-profile-details img {
+    width: 150px;  
+    height: 150px;
+    border-radius: 50%;
+}
+
+.about-profile-details p {
+    /*font-family: "lora-regular", serif;*/
+	font-size: 2rem;
+	line-height: 1.8;
+	color: #888888;
+}
+
+/**
+ * about-skills
+ * -------------------------------------------------------------------
+ */
+.about-skills-list {
+	list-style: none;
+	margin-left: 0;
+}
+.about-skills-list li {
+    display: flex;
+    flex-direction: column;
+	padding: 0 0 1.5rem 0;
+	margin-bottom: .6rem;
+}
+.about-skills-list li strong {
+	/*font-family: "poppins-bold", sans-serif;*/
+	color: #313131;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
+.about-skills-list li span {
+	/*font-family: "poppins-regular", sans-serif;*/
+	color: #888888;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+/**
+ * about-resume
+ * -------------------------------------------------------------------
+ */
+.about-resume {
+    text-align: center;
+}
+
+.about-resume .button {
+    /*font-family: "poppins-medium", sans-serif;*/
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    padding: 0 3rem;
+    margin: 0 .3rem 1.2rem 0;
+    background: #d8d8d8;
+    color: #313131;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/**
+ * experience-content
+ * -------------------------------------------------------------------
+ */
+.experience-content{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.experience-card{
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-card-header{
+    width: 30%;
+    text-align: right;
+}
+
+.experience-card-icon{
+    width: 5%;
+    position: relative;
+    text-align: center;
+}
+
+.experience-card-content{
+    width: 65%;
+    text-align: left;
+}
+
+.experience-card-icon img{
+	height: 4.8rem;
+	width: 4.8rem;
+	line-height: 4.8rem;
+	border-radius: 50%;
+	text-align: center;
+	color: #FFFFFF;	
+    z-index: 500;	
+    position: relative;
+}
+
+.experience-card-icon::before{    
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
