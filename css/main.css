@@ -1,159 +1,212 @@
-html{
-    font-size: 10px;
-}
-body {
-	background: #151515;
-	font-family: "lora-regular", serif;
-    font-family: "poppins-medium", sans-serif;
-	font-size: 1.7rem;
-	line-height: 3rem;
-	color: #6e6e6e;
-}
-
-h1, h2, h3, h4, h5, h6{
-	font-family: "poppins-semibold", sans-serif;
-	color: #313131;
-	font-style: normal;
-	text-rendering: optimizeLegibility;
-	margin-bottom: 2.1rem;
-}
-
-h1 {
-	font-size: 3.1rem;
-	line-height: 1.355;
-	letter-spacing: -.1rem;
-}
-
-h2 {
-	font-family: "poppins-bold";
-	margin-bottom: 1.2rem;
-}
-
-h3 {
-	margin-bottom: 1.8rem;
-}
+/** 
+ * ===================================================================
+ * 01. webfonts and iconfonts - (_document-setup.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+@import url("fonts.css");
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("micons/micons.css");
 
 /**
- * sections' structure
+ * overall structure
  * -------------------------------------------------------------------
  */
-#about, #education {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 20px;
+html {
+    font-size: 10px;
+}
+
+body {
+    /*background: #151515;*/
+    background-color: yellow;
+    font-family: "poppins-medium", sans-serif;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #6e6e6e;
+    margin: 0px;
+}
+
+header {
+    background: #000000;
+}
+
+#about {
     background-color: #f8f8f8;
 }
 
 #experience {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 20px;
-	background: #ebebeb;
+    background: #ebebeb;
+}
+
+#education {
+    background: #ebebeb;
+}
+
+footer {
+    background: #151515;
+}
+
+header,
+main,
+section,
+footer{
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
 /**
  * common class
  * -------------------------------------------------------------------
  */
- .section-intro {
-	max-width: 700px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	margin-bottom: 3.6rem;
-	position: relative;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #313131;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 2.1rem;
 }
 
- .section-intro h1{
-    /*font-family: "poppins-bold", sans-serif;*/
-	color: #FF0077;
+h1 {
+    font-size: 3.1rem;
+    line-height: 1.355;
+    letter-spacing: -.1rem;
+}
+
+h2 {
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    margin-bottom: 1.8rem;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3.6rem;
+    position: relative;
+}
+
+.section-intro h1 {
+    color: #FF0077;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
-	font-size: 2.3rem;
-	line-height: 1.565;
-	letter-spacing: .3rem;
-	margin-bottom: 0;
-}
-
-/*
-.section-intro h2{
-    font-family: "poppins-semibold", serif;
-	font-size: 3.6rem;
-	color: #313131;
-	line-height: 1.25;
-	margin-bottom: 1.2rem;
-}
-*/
-
-.about-profile h3, 
-.about-skills h3{
-    /*font-family: "poppins-bold", sans-serif;*/
-	font-size: 1.8rem;
-	text-transform: uppercase;
-	letter-spacing: .25rem;
+    font-size: 2.3rem;
+    line-height: 1.565;
+    letter-spacing: .3rem;
+    margin-bottom: 0;
 }
 
 /**
- * about-profile-details
+ * header
  * -------------------------------------------------------------------
  */
-.about-profile-details{
+
+/* nav */
+.navbar-links {
+	background: #000000;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar-links li a {
+	color: #FFFFFF;
+	text-decoration: none;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    background-color: #FF0077;
+    border-radius: 4px;
+}
+/**
+ * about section
+ * -------------------------------------------------------------------
+ */
+
+/* about profile div */
+.about-profile,
+.about-skills,
+.about-resume{
+    padding-bottom: 3rem;
+}
+.about-profile h3,
+.about-skills h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+
+.about-profile-details {
     display: flex;
     flex-direction: row;
 }
 
 .about-profile-details img {
-    width: 150px;  
+    width: 150px;
     height: 150px;
     border-radius: 50%;
 }
 
 .about-profile-details p {
-    /*font-family: "lora-regular", serif;*/
-	font-size: 2rem;
-	line-height: 1.8;
-	color: #888888;
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #888888;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
-/**
- * about-skills
- * -------------------------------------------------------------------
- */
+/* about-skills div */
 .about-skills-list {
-	list-style: none;
-	margin-left: 0;
+    list-style: none;
+    margin-left: 0;
 }
+
 .about-skills-list li {
     display: flex;
     flex-direction: column;
-	padding: 0 0 1.5rem 0;
-	margin-bottom: .6rem;
-}
-.about-skills-list li strong {
-	/*font-family: "poppins-bold", sans-serif;*/
-	color: #313131;
-	text-transform: uppercase;
-	letter-spacing: .2rem;
-	font-size: 1.5rem;
-	line-height: 3rem;
-}
-.about-skills-list li span {
-	/*font-family: "poppins-regular", sans-serif;*/
-	color: #888888;
-	font-size: 1.5rem;
-	line-height: 1;
+    padding: 0 0 1.5rem 0;
+    margin-bottom: .6rem;
 }
 
-/**
- * about-resume
- * -------------------------------------------------------------------
- */
+.about-skills-list li strong {
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.about-skills-list li span {
+    color: #888888;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* about-resume div */
 .about-resume {
     text-align: center;
 }
 
 .about-resume .button {
-    /*font-family: "poppins-medium", sans-serif;*/
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -172,50 +225,51 @@ h3 {
     transition: all 0.3s ease-in-out;
 }
 
-
-/**
- * experience-content
- * -------------------------------------------------------------------
- */
-.experience-content{
-    display: flex;
-    flex-direction: column;
-    
+.about-resume .button:hover {
+    background-color: #FF0077;
+    border-radius: 4px;
 }
 
-.experience-card{
+/**
+ * experience and education section
+ * -------------------------------------------------------------------
+ */
+
+ /* experience-card */
+.experience-card {
     display: flex;
     flex-direction: row;
 }
 
-.experience-card-header{
+.experience-card-header {
     width: 30%;
     text-align: right;
 }
 
-.experience-card-icon{
+.experience-card-icon {
     width: 5%;
     position: relative;
     text-align: center;
 }
 
-.experience-card-content{
+.experience-card-details {
     width: 65%;
     text-align: left;
 }
 
-.experience-card-icon img{
-	height: 4.8rem;
-	width: 4.8rem;
-	line-height: 4.8rem;
-	border-radius: 50%;
-	text-align: center;
-	color: #FFFFFF;	
-    z-index: 500;	
+
+.experience-card-icon img {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 500;
     position: relative;
 }
 
-.experience-card-icon::before{    
+.experience-card-icon::before {
     content: "";
     position: absolute;
     top: 0;
@@ -223,4 +277,37 @@ h3 {
     left: 50%;
     width: 1px;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/**
+ * footer
+ * -------------------------------------------------------------------
+ */
+
+/* footer-contact div */
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contact-card {
+    flex: 1;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.footer-contact-card .icon {
+    margin-bottom: 2.1rem;
+}
+
+.footer-contact-card .icon i {
+    font-size: 4.2rem;
+    color: #FFFFFF;
+}
+
+.footer-contact-card h5 {
+    color: #FF0077;
 }
