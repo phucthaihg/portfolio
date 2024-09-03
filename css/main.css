@@ -42,6 +42,10 @@ header {
     background: #ebebeb;
 }
 
+#certifications {
+    background: #ebebeb;
+}
+
 footer {
     background: #151515;
 }
@@ -112,6 +116,44 @@ h3 {
     line-height: 1.565;
     letter-spacing: .3rem;
     margin-bottom: 0;
+}
+
+.button-stroke {
+    background: transparent !important;
+    color: #313131;
+    border: 1px solid #313131;
+    border-radius: 15px;
+    padding: 0.5rem 3rem;
+    margin: 0 .3rem 1.2rem 0;
+}
+
+.button-stroke:hover {
+    color: #FF0077;
+    border: 1px solid #FF0077;
+}
+
+.button-solid {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    padding: 0 3rem;
+    margin: 0 .3rem 1.2rem 0;
+    background: #d8d8d8;
+    color: #313131;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-solid:hover {
+    background-color: #FF0077;
+    border-radius: 4px;
 }
 
 /**
@@ -208,30 +250,6 @@ h3 {
     text-align: center;
 }
 
-.about-resume .button {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    height: 5.4rem;
-    line-height: 5.4rem;
-    padding: 0 3rem;
-    margin: 0 .3rem 1.2rem 0;
-    background: #d8d8d8;
-    color: #313131;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-    border: none;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-}
-
-.about-resume .button:hover {
-    background-color: #FF0077;
-    border-radius: 4px;
-}
-
 /**
  * experience and education section
  * -------------------------------------------------------------------
@@ -279,6 +297,19 @@ h3 {
     width: 1px;
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.experience-card:hover {
+    background-color: #f8f8f8;
+}
+
+.experience-card-details a {
+	text-decoration: none;
+}
+
+.experience-card-details a:hover {
+    color: #FF0077;
+}
+
 
 /**
  * footer
