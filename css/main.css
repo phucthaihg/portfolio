@@ -17,8 +17,7 @@ html {
 }
 
 body {
-    /*background: #151515;*/
-    background-color: yellow;
+    background: #151515;
     font-family: "poppins-medium", sans-serif;
     font-size: 1.7rem;
     line-height: 3rem;
